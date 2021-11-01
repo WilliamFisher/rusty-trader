@@ -7,12 +7,6 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -28,11 +22,46 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.item-icon > img {
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+.item-icon {
+  list-style: none;
+}
+
+.item-icon > button {
+  margin-left: 5px;
+}
+
+.item-trade-box {
+  display: flex;
+  justify-content: center;
+}
+
+#sell_img {
+  border: 2px solid #38853e;
+  margin: 2px;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+#buy_img {
+  border: 2px solid #3464cc;
+  margin: 2px;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.item-trade-box + div > input {
+  margin: 2px;
+  width: 80px;
+}
+
+.placeholder {
+  width: 80px;
+  height: 80px;
+  background-color: rgb(238, 238, 238);
+  border: 2px solid rgb(199, 199, 199);
 }

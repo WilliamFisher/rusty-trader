@@ -1,15 +1,16 @@
 import React from "react";
 import { Table } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 function ServerTable(props) {
   const servers = props.servers;
 
-  console.log(`ServerList Servers: ${JSON.stringify(servers)}`);
-
   const listItems = servers.slice(0, 10).map((server) => (
-    <tr>
+    <tr key={server.name}>
       <td>
-        <a href="/home">{server.name}</a>
+        <Link to={`/server/${server.server_Id}?name=${server.name}`}>
+          {server.name}
+        </Link>
       </td>
       <td>{server.platform}</td>
       <td>{server.region}</td>

@@ -18,9 +18,7 @@ function Home() {
   const [errorOnFetch, setErrorOnFetch] = useState(false);
 
   async function fetchServers() {
-    const response = await fetch(
-      "https://cors-anywhere.herokuapp.com/https://bugs.double11.com/rust/api/servers/status"
-    );
+    const response = await fetch("http://localhost:5000/server");
 
     if (!response.ok) {
       const errorMessage = `An error occured trying to get a list of servers: ${response.status}`;
